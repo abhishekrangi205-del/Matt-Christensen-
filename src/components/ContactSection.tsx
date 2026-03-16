@@ -56,12 +56,14 @@ const ContactSection = () => {
         >
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <Label htmlFor="contact-name" className="text-foreground mb-1.5 block">
+              <Label htmlFor="contact-name" className="text-foreground mb-1.5 block font-medium">
                 Full Name
               </Label>
               <input
                 id="contact-name"
+                name="name"
                 type="text"
+                autoComplete="name"
                 placeholder="Your name"
                 required
                 aria-required="true"
@@ -72,12 +74,15 @@ const ContactSection = () => {
               />
             </div>
             <div>
-              <Label htmlFor="contact-email" className="text-foreground mb-1.5 block">
+              <Label htmlFor="contact-email" className="text-foreground mb-1.5 block font-medium">
                 Email
               </Label>
               <input
                 id="contact-email"
+                name="email"
                 type="email"
+                autoComplete="email"
+                inputMode="email"
                 placeholder="you@example.com"
                 required
                 aria-required="true"
@@ -88,12 +93,15 @@ const ContactSection = () => {
               />
             </div>
             <div>
-              <Label htmlFor="contact-phone" className="text-foreground mb-1.5 block">
+              <Label htmlFor="contact-phone" className="text-foreground mb-1.5 block font-medium">
                 Phone <span className="text-muted-foreground font-normal">(optional)</span>
               </Label>
               <input
                 id="contact-phone"
+                name="phone"
                 type="tel"
+                autoComplete="tel"
+                inputMode="tel"
                 placeholder="(555) 000-0000"
                 value={form.phone}
                 onChange={(e) => setForm({ ...form, phone: e.target.value })}
@@ -102,11 +110,12 @@ const ContactSection = () => {
               />
             </div>
             <div>
-              <Label htmlFor="contact-message" className="text-foreground mb-1.5 block">
+              <Label htmlFor="contact-message" className="text-foreground mb-1.5 block font-medium">
                 Message
               </Label>
               <textarea
                 id="contact-message"
+                name="message"
                 placeholder="How can we help?"
                 rows={4}
                 required
