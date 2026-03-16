@@ -7,7 +7,7 @@ import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 const testimonials = [
   {
     quote:
-      "Tristan made the entire process seamless. His attention to detail and market knowledge are truly exceptional.",
+      "Matt made the entire process seamless. His attention to detail and market knowledge are truly exceptional.",
     name: "Sarah & David M.",
     context: "First-time Buyers",
     initials: "S&D",
@@ -21,7 +21,7 @@ const testimonials = [
   },
   {
     quote:
-      "Working with Tristan felt less like a transaction and more like having a trusted advisor by our side.",
+      "Working with Matt felt less like a transaction and more like having a trusted advisor by our side.",
     name: "Priya & Arjun K.",
     context: "Relocation Buyers",
     initials: "P&A",
@@ -35,7 +35,7 @@ const testimonials = [
   },
   {
     quote:
-      "Professional, patient, and genuinely invested in our success. Tristan is the gold standard in real estate.",
+      "Professional, patient, and genuinely invested in our success. Matt is the gold standard in real estate.",
     name: "Robert & Ellen T.",
     context: "Downsizing Sellers",
     initials: "R&E",

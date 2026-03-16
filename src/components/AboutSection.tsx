@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 
-const ABOUT_IMAGE_URL = "/file_00000000984071fd82154f5f0c70a4af.png";
+const ABOUT_IMAGE_URL = "/matt christensen/matt-christensen-about.jpeg";
 
 const stats = [
   { value: "10+", label: "Years experience" },
@@ -26,7 +26,7 @@ const AboutSection = () => {
           >
             <img
               src={ABOUT_IMAGE_URL}
-              alt="Tristan Ritchie, Realtor"
+              alt="Matt Christensen, Realtor"
               className="h-full w-full object-cover object-top"
             />
           </motion.div>

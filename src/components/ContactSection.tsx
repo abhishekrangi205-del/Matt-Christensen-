@@ -19,7 +19,7 @@ const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
     await new Promise((r) => setTimeout(r, 800));
-    toast({ title: "Message sent", description: "Tristan will be in touch shortly." });
+    toast({ title: "Message sent", description: "Matt will be in touch shortly." });
     setForm({ name: "", email: "", phone: "", message: "" });
     setIsSubmitting(false);
   };
@@ -143,11 +143,11 @@ const ContactSection = () => {
               </h3>
               <div className="space-y-4">
                 <a
-                  href="mailto:tristan@example.com"
+                  href="mailto:matt@example.com"
                   className="flex items-center gap-3 text-muted-foreground hover:text-accent transition-colors"
                 >
                   <Mail className="h-5 w-5 shrink-0 text-accent/80" />
-                  <span>tristan@example.com</span>
+                  <span>matt@example.com</span>
                 </a>
                 <a
                   href="tel:+14165551234"

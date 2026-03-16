@@ -106,13 +106,13 @@ const HeroSection = () => {
                 {/* Image Container with inner shadow/border */}
                 <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-white/30 shadow-inner mb-6 relative">
                   <img 
-                    src="/file_00000000984071fd82154f5f0c70a4af.png" 
-                    alt="Tristan Ritchie"
+                    src="/matt christensen/matt-christensen-about.jpeg" 
+                    alt="Matt Christensen"
                     className="w-full h-full object-cover object-top filter brightness-105 contrast-105"
                   />
                 </div>
                 
-                <h2 className="text-2xl font-serif font-bold text-white mb-1 shadow-black/50 drop-shadow-md">Tristan Ritchie</h2>
+                <h2 className="text-2xl font-serif font-bold text-white mb-1 shadow-black/50 drop-shadow-md">Matt Christensen</h2>
                 <p className="text-accent font-medium tracking-wide uppercase text-sm mb-4 shadow-black/50 drop-shadow-sm">Licensed Realtor</p>
                 
                 <div className="w-full h-px bg-gradient-to-r from-transparent via-white/30 to-transparent my-4"></div>

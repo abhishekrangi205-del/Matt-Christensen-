@@ -116,7 +116,7 @@ const Navigation = () => {
           className="text-lg font-semibold tracking-tight text-foreground"
           style={{ fontFamily: "'Public Sans', sans-serif" }}
         >
-          Tristan Ritchie
+          Matt Christensen
         </a>
 
         {/* Desktop */}
