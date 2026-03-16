@@ -14,6 +14,13 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 
 const PRICE_OPTIONS = [
@@ -205,60 +212,73 @@ const PropertySearch = () => {
           whileInView={prefersReducedMotion ? undefined : { opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={prefersReducedMotion ? { duration: 0 } : { duration: 0.4 }}
-          className="mb-12"
+          className="mb-12 w-full max-w-full overflow-hidden"
         >
           <h3 className="text-lg font-medium text-foreground mb-6 text-center">
             Featured listings
           </h3>
-          <div className="grid sm:grid-cols-3 gap-6">
-            {FEATURED_LISTINGS.map((listing, i) => (
-              <motion.div
-                key={listing.id}
-                initial={prefersReducedMotion ? undefined : { opacity: 0, y: 12 }}
-                whileInView={
-                  prefersReducedMotion ? undefined : { opacity: 1, y: 0 }
-                }
-                viewport={{ once: true }}
-                transition={
-                  prefersReducedMotion
-                    ? { duration: 0 }
-                    : { duration: 0.3, delay: 0.1 * i }
-                }
-              >
-                <Card className="overflow-hidden rounded-lg border bg-card text-card-foreground shadow-sm hover:shadow-md transition-shadow">
-                  <div className="aspect-[4/3] overflow-hidden bg-muted">
-                    <img
-                      src={listing.image}
-                      alt=""
-                      className="h-full w-full object-cover"
-                    />
-                  </div>
-                  <CardContent className="p-4">
-                    <p className="text-sm font-semibold text-foreground">
-                      {listing.price}
-                    </p>
-                    <p className="text-sm text-muted-foreground flex items-center gap-1 mt-0.5">
-                      <MapPin className="h-3.5 w-3.5 shrink-0" />
-                      {listing.address}, {listing.area}
-                    </p>
-                    <p className="text-xs text-muted-foreground mt-2">
-                      {listing.beds} beds · {listing.baths} baths · {listing.type}
-                    </p>
-                  </CardContent>
-                  <CardFooter className="p-4 pt-0">
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="w-full rounded-md border-accent text-accent hover:bg-accent hover:text-accent-foreground"
-                      onClick={scrollToContact}
-                    >
-                      Inquire
-                    </Button>
-                  </CardFooter>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
+
+          <Carousel 
+            opts={{ align: "start", loop: false }}
+            className="w-full cursor-grab active:cursor-grabbing"
+          >
+            <CarouselContent className="-ml-4">
+              {FEATURED_LISTINGS.map((listing, i) => (
+                <CarouselItem key={listing.id} className="pl-4 basis-[85%] sm:basis-1/2 md:basis-1/3">
+                  <motion.div
+                    initial={prefersReducedMotion ? undefined : { opacity: 0, y: 12 }}
+                    whileInView={
+                      prefersReducedMotion ? undefined : { opacity: 1, y: 0 }
+                    }
+                    viewport={{ once: true }}
+                    transition={
+                      prefersReducedMotion
+                        ? { duration: 0 }
+                        : { duration: 0.3, delay: 0.1 * i }
+                    }
+                  >
+                    <Card className="overflow-hidden rounded-lg border bg-card text-card-foreground shadow-sm hover:shadow-md transition-shadow h-full flex flex-col">
+                      <div className="aspect-[4/3] overflow-hidden bg-muted">
+                        <img
+                          src={listing.image}
+                          alt=""
+                          className="h-full w-full object-cover"
+                        />
+                      </div>
+                      <CardContent className="p-4 flex-grow">
+                        <p className="text-sm font-semibold text-foreground">
+                          {listing.price}
+                        </p>
+                        <p className="text-sm text-muted-foreground flex items-center gap-1 mt-0.5">
+                          <MapPin className="h-3.5 w-3.5 shrink-0" />
+                          {listing.address}, {listing.area}
+                        </p>
+                        <p className="text-xs text-muted-foreground mt-2">
+                          {listing.beds} beds · {listing.baths} baths · {listing.type}
+                        </p>
+                      </CardContent>
+                      <CardFooter className="p-4 pt-0 mt-auto">
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="w-full rounded-md border-accent text-accent hover:bg-accent hover:text-accent-foreground"
+                          onClick={scrollToContact}
+                        >
+                          Inquire
+                        </Button>
+                      </CardFooter>
+                    </Card>
+                  </motion.div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            
+            {/* Optional visible navigation on larger screens if desired */}
+            {/* <div className="hidden md:block">
+              <CarouselPrevious className="absolute -left-12 top-1/2 -translate-y-1/2" />
+              <CarouselNext className="absolute -right-12 top-1/2 -translate-y-1/2" />
+            </div> */}
+          </Carousel>
         </motion.div>
 
         {/* Tell us what you're looking for CTA */}
