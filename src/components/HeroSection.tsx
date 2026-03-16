@@ -22,7 +22,7 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex flex-col items-center justify-center py-[20vh] px-4 overflow-hidden"
+      className="relative min-h-screen flex flex-col items-center justify-center pt-24 pb-12 md:py-[20vh] px-4 overflow-hidden"
     >
       {/* Hero background image */}
       <div

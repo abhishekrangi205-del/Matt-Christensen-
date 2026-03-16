@@ -38,7 +38,7 @@ const ServiceCards = () => {
   };
 
   return (
-    <section id="services" className="py-24 md:py-32 bg-muted/50">
+    <section id="services" className="py-12 md:py-32 bg-muted/50">
       <div className="container">
         <motion.div
           initial={prefersReducedMotion ? undefined : { opacity: 0, y: 16 }}

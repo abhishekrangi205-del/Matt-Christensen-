@@ -51,7 +51,7 @@ const Testimonials = () => {
   const prefersReducedMotion = usePrefersReducedMotion();
 
   return (
-    <section id="testimonials" className="py-24 md:py-32 bg-muted/50 overflow-hidden">
+    <section id="testimonials" className="py-12 md:py-32 bg-muted/50 overflow-hidden">
       <div className="container max-w-5xl px-4 md:px-8">
         <motion.div
           initial={prefersReducedMotion ? undefined : { opacity: 0, y: 16 }}

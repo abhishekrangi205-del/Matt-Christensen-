@@ -25,7 +25,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-24 md:py-32" aria-labelledby="contact-heading">
+    <section id="contact" className="py-12 md:py-32" aria-labelledby="contact-heading">
       <div className="container max-w-5xl">
         <motion.div
           initial={prefersReducedMotion ? undefined : { opacity: 0, y: 16 }}

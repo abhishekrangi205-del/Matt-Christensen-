@@ -96,7 +96,7 @@ const PropertySearch = () => {
   };
 
   return (
-    <section id="properties" className="py-24 md:py-32">
+    <section id="properties" className="py-12 md:py-32">
       <div className="container max-w-4xl">
         <motion.div
           initial={prefersReducedMotion ? undefined : { opacity: 0, y: 16 }}
